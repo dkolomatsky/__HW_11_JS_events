@@ -1,0 +1,38 @@
+/* task 1-2 */
+.success {
+  border: 2px solid green;
+}
+
+.error {
+  border: 2px solid red;
+}
+/* task3 */
+.kyivstar,
+.lifecell,
+.vodafone {
+  display: none;
+}
+.kyivstarVisible,
+.lifecellVisible,
+.vodafonVisible {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+}
+/* task 4 */
+.container {
+  margin: 30px;
+}
+.focus{
+  border: 5px solid green;
+}
+.blur{
+  border: initial 1px solid;
+  color: green;
+}
+.error{
+  border: 5px solid red;
+}
+
+

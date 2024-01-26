@@ -28,46 +28,47 @@
         <div class="h2">Реєстрація користувача</div>
         <div class="row">
             <div class="col-md-6 mt-4">
-                <input type="text" id="userName" class="form-control field" placeholder="First name"
-                    aria-label="First name">
+                <label for="name">First name:</label>
+                <input type="text" name="name" id="userName" class="form-control field" placeholder="First name">
             </div>
             <div class="col-md-6 mt-4">
-                <input type="text" id="userSurname" class="form-control field" placeholder="Last name"
-                    aria-label="Last name">
+                <label for="surname">Last name:</label>
+                <input type="text" name="surname" id="userSurname" class="form-control field" placeholder="Last name">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <input type="email" id="userEmail" class="form-control mt-4 field" id="exampleFormControlInput1"
+            <div class="col-md-6 mt-4">
+                <label for="email">email address:</label>
+                <input type="email" name="email" id="userEmail" class="form-control" id="exampleFormControlInput1"
                     placeholder="name@example.com">
             </div>
-            <div class="col-md-6">
-                <input type="tel" id="userPhone" class="form-control mt-4 field" id="exampleFormControlInput1"
+            <div class="col-md-6 mt-4">
+                <label for="phone">phone number:</label>
+                <input type="tel" id="userPhone" name="phone" class="form-control" id="exampleFormControlInput1"
                     placeholder="+38 000 000 00 00">
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
-                <div class="form-control mt-4"> Логотип мобільного оператора:
-                    <img src="" alt="">
-                </div>
+            <div class="col mt-4">Логотип мобільного оператора:
+                <img src="" alt="">
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
-                <select class="form-select mt-4" id="Citys" aria-label="Default select example">
-                    <option value="">Вкажіть де ви народилися...</option>
-                </select>
-            </div>
-        </div>
+            <div class="col mt-4">
+                <label>Вкажіть де ви народилися...</label>
+                <select class="form-select" id="Citys" aria-label="Default select example">
+                    <!-- <option value="defoult">Вкажіть де ви народилися...</option> -->
+    </select>
+    </div>
+    </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <input class="btn btn-primary mt-4" type="submit" value="Submit">
-            </div>
+    <div class="row">
+        <div class="col-md-6">
+            <input class="btn btn-primary mt-4" type="submit" value="Submit">
         </div>
+    </div>
     </div> -->
 
     <!-- task 4 -->

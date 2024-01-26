@@ -42,7 +42,8 @@ inputs.forEach(function (input) {
 */
 // Завдання № 3 початок -------------------------------------------------------------------------
 
-/*import { data } from "../uacity.js";
+/*
+import { data } from "../uacity.js";
 const regName = /^[А-ЩЬЮЯЇІЄҐа-щьюяїіґ\sʼ-]+$/;
 const regTel = /\+38\s\d{3}\s\d{3}\s\d{2}\s\d{2}/;
 const regEmail = /^[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}$/i;
@@ -66,14 +67,17 @@ data.forEach((item) => {
 // Функція для валідації полів вводу імені та прізвища користувача
 const nameANDsurnameValidation = (e) => {
   if (regName.test(e.target.value) === true) {
+    e.target.classList.remove("is-invalid");
     e.target.classList.add("is-valid");
   } else {
     e.target.classList.add("is-invalid");
   }
+  console.dir(e.target);
 };
 // Функція для валідаціі введеня поштової адреси користувача
 const emailValidation = () => {
   if (regEmail.test(userEmeil.value) === true) {
+    userEmeil.classList.remove("is-invalid");
     userEmeil.classList.add("is-valid");
   } else {
     userEmeil.classList.add("is-invalid");
@@ -82,6 +86,7 @@ const emailValidation = () => {
 // Функція для валідаціі номеру телофону користувача а також ідентифікаціі мобільного оператора і виводу його логотипу в залежності від введеного номеру
 const userTelValidation = () => {
   if (regTel.test(userPhone.value) === true) {
+    userPhone.classList.remove("is-invalid");
     userPhone.classList.add("is-valid");
   } else {
     userPhone.classList.add("is-invalid");
@@ -116,21 +121,15 @@ const userTelValidation = () => {
 };
 // Функція для валідаціі вибору міста
 const cityValidation = () => {
-  if (userCity.value !== "defoult") {
-    userCity.classList.add("is-valid");
-  } else {
+  if (userCity.value === "defoult") {
     userCity.classList.add("is-invalid");
+  } else {
+    userCity.classList.remove("is-invalid");
+    userCity.classList.add("is-valid");
   }
 };
-// Функція для підтвердження введених користувачем данних ❌ проверить логику функции
-const submitData = () => {
-    inputsArr.forEach((input) => {
-        input.addEventListener('submit', nameANDsurnameValidation);
-         input.addEventListener('submit', emailValidation);
-          input.addEventListener('submit', userTelValidation);
-           input.addEventListener('submit', cityValidation);
-    })
-};
+// Функція для підтвердження введених користувачем данних ❌ створити логику функции
+const submitData = () => {};
 
 btnSubmit.addEventListener("click", submitData);
 userName.addEventListener("change", nameANDsurnameValidation);
